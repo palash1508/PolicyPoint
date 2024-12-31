@@ -20,7 +20,7 @@
                 </div>
 
                 <!-- Quick Links -->
-                <div class="">
+                <div class="pl-8 md:pl-0">
                     <div class="w-fit border-b-2 mb-2">
                         <span class="text-lg font-semibold ">Quick Link</span>
                     </div>
@@ -32,7 +32,7 @@
                 </div>
 
                 <!-- Services -->
-                <div class="">
+                <div class="pl-8 md:pl-0">
                     <div class="w-fit border-b-2 mb-2">
                         <span class="text-lg font-semibold mb-2">Services</span>
                     </div>
@@ -44,7 +44,7 @@
                 </div>
 
                 <!-- Contact Us -->
-                <div class="">
+                <div class="pl-8 md:pl-0">
                     <div class="w-fit border-b-2 mb-2">
                         <span class="text-lg font-semibold mb-2">Contact Us</span>
                     </div>

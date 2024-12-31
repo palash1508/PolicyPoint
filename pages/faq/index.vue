@@ -2,19 +2,9 @@
     <div>
         <SharedHeroSection :title="pageTitle" :bgImage="bgImage" :breadcrumb="breadcrumb"
             :featuredImage="featuredImage" />
-        <div class="relative py-28">
-
-
-            <div class="absolute top-0 left-0">
-                <img src="/assets/favicon/Top_Left_Design_Icon.png" alt="">
-            </div>
-            <div class="absolute bottom-0 right-0">
-                <img src="/assets/favicon/Bottom_Right_Design_Icon.png" alt="">
-            </div>
-            <div class="">
-                <FaqFrequentlyAskQuestions />
-            </div>
-
+        
+        <div class="w-full">
+            <FaqFrequentlyAskQuestions />
         </div>
 
         <div>

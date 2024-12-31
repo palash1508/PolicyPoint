@@ -7,6 +7,7 @@
             :featuredImage="featuredImage"
         />
         <AboutUsFirstSection />
+        <AboutUsSecondSection />
         
     </div>
 </template>
