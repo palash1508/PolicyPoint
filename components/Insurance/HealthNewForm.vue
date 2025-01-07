@@ -1,6 +1,6 @@
 <template>
     <div class="w-full bg-[#EEEEEE33] pb-20">
-        <div v-if="!memberSelected" class="max-w-4xl mx-auto py-8 space-y-6 ">
+        <div v-if="!memberSelected" class="max-w-4xl mx-auto py-8 space-y-6">
             <!-- Header -->
             <h1 class="text-4xl font-semibold text-center text-[#2B2B5F]">
                 Health insurance made simple. Find the plan that's right for you.
@@ -8,45 +8,49 @@
             <h1 class="text-xl font-semibold text-center text-[#000000]">
                 Select members you want to insure
             </h1>
-    
+
             <!-- Gender Selection -->
             <div class="flex flex-col md:flex-row md:items-start space-x-12 px-1">
                 <div class="flex justify-start mt-2">
-                    <button class="px-6 py-2 rounded-l-lg font-semibold  text-sm "
+                    <button class="px-6 py-2 rounded-l-lg font-semibold text-sm"
                         :class="gender === 'Male' ? 'bg-[#2B2B5F] text-[#FFFFFF]' : 'text-[#000000] border-[#2B2B5F] border'"
-                        @click="gender = 'Male'">
+                        @click="setGender('Male')">
                         Male
                     </button>
-                    <button class="px-6 py-2 rounded-r-lg font-medium "
+                    <button class="px-6 py-2 rounded-r-lg font-medium"
                         :class="gender === 'Female' ? 'bg-[#2B2B5F] text-[#FFFFFF]' : 'text-[#000000] border-[#2B2B5F] border'"
-                        @click="gender = 'Female'">
+                        @click="setGender('Female')">
                         Female
                     </button>
                 </div>
-    
-                <div class="">
-                    <!-- Member Selection -->
+
+                <!-- Member Selection -->
+                <div>
                     <div class="grid grid-cols-2 gap-6 justify-items-center">
                         <SharedMemberCard v-for="(member, index) in members" :key="index" :label="member.label"
                             :withCounter="member.isCount" :defaultCount="member.count"
-                            @update:count="updateCount(member.label, $event)"
-                            @select="toggleMember(member.label, $event)" />
+                            :totalChildrenCount="totalChildrenCount"
+                            @update:count="(newCount) => (member.count = newCount)"
+                            @select="(isSelected) => (member.selected = isSelected)"
+                            @total-children-change="updateTotalChildrenCount" />
                     </div>
-    
+
                     <!-- More Members -->
                     <div class="text-center mt-4">
-                        <button class="text-#000000 font-semibold text-xl" @click="showMoreMembers = !showMoreMembers">
+                        <button class="text-[#000000] font-semibold text-xl" @click="toggleMoreMembers">
                             More Members {{ showMoreMembers ? '▲' : '▼' }}
                         </button>
                         <div v-if="showMoreMembers" class="grid grid-cols-2 gap-6 mt-4 justify-items-center">
                             <SharedMemberCard v-for="(member, index) in moreMembers" :key="index" :label="member.label"
-                                :isCount="member.isCount" @select="toggleMember(member.label, $event)" />
+                                :withCounter="member.isCount" :defaultCount="member.count"
+                                @update:count="(newCount) => (member.count = newCount)"
+                                @select="(isSelected) => (member.selected = isSelected)" />
                         </div>
                     </div>
-    
+
                     <!-- Continue Button -->
                     <div class="text-center mt-10">
-                        <button @click="proceedForm"
+                        <button @click="memberSelected = true"
                             class="px-20 py-3 bg-[#2B2B5F] text-[#FFFFFF] rounded-lg hover:bg-blue-700 text-2xl font-bold">
                             Continue
                         </button>
@@ -60,25 +64,21 @@
                 </div>
             </div>
         </div>
-    
-        <!-- Next Form details  -->
-    
-        <div v-if="memberSelected" class="min-h-screen ">
-            <!-- Back Button -->
-            <header class="px-4 py-2  shadow">
+
+        <!-- Next Form Section -->
+        <div v-if="memberSelected && !ageFilled" class="min-h-screen">
+            <header class="px-4 py-2 shadow">
                 <button @click="goBack" class="flex items-center space-x-2 text-[#2B2B5F]">
                     <i class="fas fa-arrow-left"></i>
                     <span>Back</span>
                 </button>
             </header>
-    
-            <!-- Form Section -->
+
             <main class="max-w-lg mx-auto mt-8 p-6">
-                <!-- Title -->
                 <h2 class="text-[40px] leading-[45px] font-semibold text-center text-[#2B2B5F] mb-6">
                     Provide Your Details
                 </h2>
-    
+
                 <!-- Input Fields -->
                 <div class="space-y-4">
                     <div v-for="(field, index) in personalDetails" :key="index" class="space-y-2">
@@ -90,37 +90,72 @@
                             class="w-full px-4 py-1 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2B2B5F] border-[#0000004D]" />
                     </div>
                 </div>
-    
-                <!-- Age Section Title -->
+
+                <!-- Age Selection -->
                 <h3 class="text-[40px] leading-[45px] font-semibold text-center text-[#2B2B5F] mt-8 mb-4">
                     Select Your Age
                 </h3>
-    
-                <!-- Age Inputs -->
                 <div class="space-y-4">
                     <div v-for="(field, index) in ageDetails" :key="index" class="space-y-2">
                         <label :for="field.model" class="text-[#000000] font-medium text-lg">
                             {{ field.label }}
                         </label>
-                        <select :id="field.model" v-model="formData[field.model]" placeholder="Your Age"
-                            class="w-full py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2B2B5F] px-6  border-[#0000004D">
+                        <select :id="field.model" v-model="formData[field.model]"
+                            class="w-full py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2B2B5F] px-6 border-[#0000004D]">
                             <option v-for="option in field.options" :key="option" :value="option">
                                 {{ option }}
                             </option>
                         </select>
                     </div>
                 </div>
-    
-                <!-- Continue Button -->
+
+                <div class="text-center mt-16">
+                    <NuxtLink @click="ageFilled = true"
+                        class="px-20 py-3 bg-[#2B2B5F] text-[#FFFFFF] rounded-lg hover:bg-blue-700 text-2xl font-bold">
+                        Continue
+                    </NuxtLink>
+                </div>
+            </main>
+        </div>
+
+        <!-- Medical History -->
+        <div v-if="ageFilled" class="min-h-screen">
+            <header class="px-4 py-2 shadow">
+                <button @click="goBack" class="flex items-center space-x-2 text-[#2B2B5F]">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back</span>
+                </button>
+            </header>
+
+            <main class="max-w-lg mx-auto mt-8 p-6">
+                <h2 class="text-[40px] leading-[45px] font-semibold text-center text-[#2B2B5F] mb-6">
+                    Medical history
+                </h2>
+                <h1 class="text-xl font-semibold text-center text-[#000000]">
+                    Do any member(s) have any existing illnesses for which they take regular medication?
+                </h1>
+
+                <div class="grid grid-cols-2 gap-4 md:gap-8 mt-10">
+                    <div v-for="(disease, index) in diseases" :key="index" @click="toggleDiseaseSelection(disease)" :class="[
+                        'p-4 border rounded-lg cursor-pointer text-center',
+                        selectedDiseases.includes(disease)
+                            ? 'border-[#2B2B5F] bg-blue-100'
+                            : 'border-[#01C4DE] bg-white hover:bg-gray-100'
+                    ]">
+                        {{ disease }}
+                    </div>
+                </div>
+
                 <div class="text-center mt-16">
                     <NuxtLink to="/insurance/health/plans"
-                            class="px-20 py-3 bg-[#2B2B5F] text-[#FFFFFF] rounded-lg hover:bg-blue-700 text-2xl font-bold">
-                            Continue
-                        </NuxtLink>
+                        class="px-20 py-3 bg-[#2B2B5F] text-[#FFFFFF] rounded-lg hover:bg-blue-700 text-2xl font-bold">
+                        View Plans
+                    </NuxtLink>
                 </div>
             </main>
         </div>
     </div>
+
 
     <!-- Third -->
     <div
@@ -183,115 +218,126 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-
 const gender = ref("Male");
+const totalChildrenCount = ref(0);
 const showMoreMembers = ref(false);
+const memberSelected = ref(false);
+const ageFilled = ref(false);
 
-// Main members
-const members = ref([
+// Personal Details State
+const personalDetails = [
+    { label: "Your Name", model: "fullName", type: "text", placeholder: "Your Name" },
+    { label: "Phone No.", model: "phoneNumber", type: "tel", placeholder: "Your Mobile No." },
+    { label: "Pincode", model: "pincode", type: "text", placeholder: "Pincode" },
+];
+
+const members = reactive([
     { label: "Myself", isCount: false, selected: false },
     { label: "Wife", isCount: false, selected: false },
     { label: "Father", isCount: false, selected: false },
     { label: "Mother", isCount: false, selected: false },
-    { label: "Son", isCount: true, count: 1, selected: false },
-    { label: "Daughter", isCount: true, count: 1, selected: false },
+    { label: "Son", isCount: true, count: 0, selected: false },
+    { label: "Daughter", isCount: true, count: 0, selected: false },
 ]);
 
-// Additional members
-const moreMembers = ref([
+const moreMembers = reactive([
     { label: "Grand Father", isCount: false, selected: false },
     { label: "Grand Mother", isCount: false, selected: false },
     { label: "Father Inlaw", isCount: false, selected: false },
     { label: "Mother Inlaw", isCount: false, selected: false },
 ]);
 
-// Update count for counted members
-const updateCount = (label, count) => {
-    const member = findMember(label);
-    if (member && member.isCount) {
-        member.count = count;
-    }
+const diseases = [
+    "Diabetes",
+    "Blood Pressure",
+    "Heart disease",
+    "Any Surgery",
+    "Thyroid",
+    "Asthma",
+    "Other disease",
+    "None of these"
+];
+
+// State to track selected diseases
+const selectedDiseases = ref([]);
+
+const setGender = (selectedGender) => {
+    gender.value = selectedGender;
 };
 
-// Toggle member selection
-const toggleMember = (label, selected) => {
-    const member = findMember(label);
-    if (member) {
-        member.selected = selected;
+const updateTotalChildrenCount = (change) => {
+    totalChildrenCount.value += change;
+};
+
+watch(gender, (newGender) => {
+    const spouseMember = members.find((member) => member.label === "Wife" || member.label === "Husband");
+    if (spouseMember) {
+        spouseMember.label = newGender === "Male" ? "Wife" : "Husband";
+    }
+});
+
+// Manage "More Members" Visibility
+const toggleMoreMembers = () => {
+    showMoreMembers.value = !showMoreMembers.value;
+};
+
+// Reactive State for Selected Members
+const selectedMembers = computed(() => {
+    return [...members, ...moreMembers].filter(member => member.selected);
+});
+
+// Go Back to Member Selection
+const goBack = () => {
+    memberSelected.value = false;
+    members.forEach(member => member.selected = false);
+    moreMembers.forEach(member => member.selected = false);
+};
+
+const formData = reactive({});
+
+const ageDetails = computed(() => {
+    const ageFields = [];
+
+    selectedMembers.value.forEach((member) => {
         if (member.isCount) {
-            member.count = selected ? 1 : 0;
+            if (member.label === "Son" || member.label === "Daughter") {
+                const maxChildren = 4;
+                let childCount = Math.min(member.count, maxChildren);
+
+                for (let i = 1; i <= childCount; i++) {
+                    ageFields.push({
+                        label: `${i === 1 ? 'First' : i === 2 ? 'Second' : i === 3 ? 'Third' : 'Fourth'} ${member.label} Age`,
+                        model: `${member.label.toLowerCase()}Age${i}`,
+                        options: Array.from({ length: 100 }, (_, i) => i + 1),
+                    });
+                }
+            }
+        } else {
+            ageFields.push({
+                label: `${member.label} Age`,
+                model: `${member.label.toLowerCase()}Age`,
+                options: Array.from({ length: 100 }, (_, i) => i + 1),
+            });
+        }
+    });
+
+    return ageFields;
+});
+
+const toggleDiseaseSelection = (disease) => {
+    if (selectedDiseases.value.includes(disease)) {
+        selectedDiseases.value = selectedDiseases.value.filter((item) => item !== disease);
+    } else {
+        // If "None of these" is selected, clear all other selections
+        if (disease === "None of these") {
+            selectedDiseases.value = ["None of these"];
+        } else {
+            selectedDiseases.value = selectedDiseases.value.filter((item) => item !== "None of these");
+            selectedDiseases.value.push(disease);
         }
     }
 };
 
-// Find member in either list
-const findMember = (label) => {
-    return (
-        members.value.find((m) => m.label === label) ||
-        moreMembers.value.find((m) => m.label === label)
-    );
-};
-
-
-// Form data model
-const formData = ref({
-    name: "",
-    phone: "",
-    pincode: "",
-    age: "",
-    wifeAge: "",
-});
-
-// Options for dropdown
-const ageOptions = Array.from({ length: 100 }, (_, i) => i + 1);
-
-// Personal details fields
-const personalDetails = [
-    {
-        label: "Your Name",
-        placeholder: "Your Name",
-        model: "name",
-        type: "text",
-    },
-    {
-        label: "Phone No.",
-        placeholder: "Your Mobile No.",
-        model: "phone",
-        type: "tel",
-    },
-    {
-        label: "Pincode",
-        placeholder: "Pincode",
-        model: "pincode",
-        type: "text",
-    },
-];
-
-// Age selection fields
-const ageDetails = [
-    {
-        label: "Your Age",
-        placeholder: "Select Your Age",
-        model: "age",
-        options: ageOptions,
-    },
-    {
-        label: "Your Wife Age",
-        placeholder: "Select Wife's Age",
-        model: "wifeAge",
-        options: ageOptions,
-    },
-];
-
-const goBack = () => {
-    memberSelected.value = false
-};
-
-const memberSelected = ref(false) ;
-const proceedForm = () =>{
-    memberSelected.value = true;
-}
 </script>
 
 <style scoped>

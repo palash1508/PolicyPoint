@@ -17,7 +17,7 @@
                     </span>
                 </div>
                 <NuxtLink to="/insurance/health/newform"
-                    class="md:mt-8 mt-2 w-52 h-10 bg-[#2B2B5F] text-[#FFFFFF] rounded-md hover:bg-[#2B2B5F]Dark transition">
+                    class="md:mt-8 mt-2 px-10 py-2 bg-[#2B2B5F] text-[#FFFFFF] rounded-md hover:bg-[#2B2B5F]Dark transition">
                     Get Started
                 </NuxtLink>
             </div>
