@@ -51,10 +51,9 @@
 
         <!-- Right Section -->
         <div class="flex flex-col items-center text-right space-y-2">
-
-            <button class="bg-[#2B2B5F] text-white py-2 px-6 rounded hover:bg-blue-800">
+            <NuxtLink to="/insurance/health/plan-details" class="bg-[#2B2B5F] text-white py-2 px-6 rounded hover:bg-blue-800">
                 Buy Now
-            </button>
+            </NuxtLink>
             <button class="text-[#2B2B5F] text-[10px] font-semibold">Plan details</button>
         </div>
     </div>

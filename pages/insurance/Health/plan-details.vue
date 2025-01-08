@@ -300,9 +300,9 @@
                 </div>
                 <div class=" px-3 py-1 mb-2 mt-2">
                     <div class="flex items-center justify-center  bg-[#2B2B5F] rounded-lg px-2 py-1">
-                        <div class="text-[#FFFFFF] text-sm font-semibold">
+                        <NuxtLink to="/insurance/health/kyc-final-form" class="text-[#FFFFFF] text-sm font-semibold py-1">
                             Proceed To The Proposal
-                        </div>
+                        </NuxtLink>
                     </div>
                 </div>
 

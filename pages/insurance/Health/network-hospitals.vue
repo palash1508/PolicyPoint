@@ -49,10 +49,10 @@
                         <div class="min-h-screen ">
                             <div class="max-w-4xl mx-auto">
                                 <div class="flex flex-col md:flex-row items-center justify-between mb-6 gap-2">
-                                    <h2 class="lg:text-xl xl:text-2xl font-semibold text-[#2B2B5F] flex items-center xl:w-1/3">
+                                    <h2
+                                        class="lg:text-xl xl:text-2xl font-semibold text-[#2B2B5F] flex items-center xl:w-1/3">
                                         Cashless Hospital
-                                        <img src="/assets/images/insurance/Hospital_Card_Img.png" class="ml-2"
-                                        alt="">
+                                        <img src="/assets/images/insurance/Hospital_Card_Img.png" class="ml-2" alt="">
                                     </h2>
                                     <div class="flex items-center gap-8 xl:w-2/3">
                                         <select v-model="selectedCity"
@@ -64,14 +64,16 @@
                                         <div class="relative flex-grow">
                                             <input type="text" v-model="searchQuery" placeholder="Search..."
                                                 class="border border-[#01B9D1] rounded-lg px-4 py-2  text-sm w-full" />
-                                            <img src="/assets/images/insurance/Search_Hospital_PNG.png" class="h-5 w-5 absolute top-1/2 right-3 transform -translate-y-1/2 "
+                                            <img src="/assets/images/insurance/Search_Hospital_PNG.png"
+                                                class="h-5 w-5 absolute top-1/2 right-3 transform -translate-y-1/2 "
                                                 alt="">
                                         </div>
                                     </div>
                                 </div>
 
                                 <p class="text-gray-600 text-sm mb-4">
-                                    <span class="text-[#2B2B5F] text-2xl font-semibold">{{ filteredHospitals.length }} </span> <span class="text-[#999999] font-semibold text-lg">Result Found</span> 
+                                    <span class="text-[#2B2B5F] text-2xl font-semibold">{{ filteredHospitals.length }}
+                                    </span> <span class="text-[#999999] font-semibold text-lg">Result Found</span>
                                 </p>
 
                                 <ul class="space-y-3">
@@ -133,9 +135,10 @@
                 </div>
                 <div class=" px-3 py-1 mb-2 mt-2">
                     <div class="flex items-center justify-center  bg-[#2B2B5F] rounded-lg px-2 py-1">
-                        <div class="text-[#FFFFFF] text-sm font-semibold">
+                        <NuxtLink to="/insurance/health/kyc-final-form"
+                            class="text-[#FFFFFF] text-sm font-semibold py-1">
                             Proceed To The Proposal
-                        </div>
+                        </NuxtLink>
                     </div>
                 </div>
 
