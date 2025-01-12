@@ -6,7 +6,7 @@
                     class="flex flex-col md:flex-row items-center justify-between md:items-center gap-8 p-6 bg-white rounded-lg border border-[#2B2B5F80] shadow-md hover:shadow-lg transition-shadow shadow-custom">
                     <div class="flex flex-col items-center">
                         <div>
-                            <!-- <img src="/assets/images/insurance/SBI_General.png" alt="Plan Logo" class="" /> -->
+                            <img src="/assets/images/insurance/SBI_General.png" alt="Plan Logo" class="" />
                         </div>
                     </div>
 
