@@ -10,7 +10,6 @@ export default defineNuxtConfig({
   vite: {
     resolve: {
       alias: {
-        '/assets/': '/public/assets/',
       },
     },
     assetsInclude: ['**/assets/images/**/*']
