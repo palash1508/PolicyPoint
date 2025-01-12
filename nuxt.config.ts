@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     viewer: false
   },
   nitro: {
+    preset: "github-pages",
     compressPublicAssets: true,
     prerender: {
       crawlLinks: true,
