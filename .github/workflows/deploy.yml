@@ -17,15 +17,38 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '20'
-    
-    - name: Clear cache
-      run: rm -rf node_modules .nuxt .output dist
+
+    - name: Cache node modules
+      uses: actions/cache@v3
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-modules-
 
     - name: Install Dependencies
       run: npm install
 
+    - name: List files in public directory (for debugging)
+      run: ls -R public/
+
+    - name: Check for missing assets (for debugging)
+      run: |
+        if [ ! -f ./public/assets/images/insurance/SBI_General.png ]; then
+          echo "Warning: The image SBI_General.png is missing in the public/assets/images/insurance/ directory.";
+        fi
+
+    - name: Clear cache and build artifacts (force clean build)
+      run: rm -rf node_modules .nuxt .output dist
+
+    - name: Run Nuxt prepare (verify preparation)
+      run: npm run prepare
+
     - name: Build Nuxt for Static Hosting
       run: npm run generate
+
+    - name: List files in dist directory (for debugging)
+      run: ls -R dist/
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
