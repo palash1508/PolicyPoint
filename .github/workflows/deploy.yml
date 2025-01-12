@@ -1,54 +1,40 @@
-name: Deploy App to GitHub Pages
-
+name: Deploy to GitHub Pages
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
-
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
 
-    - name: Set Up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
+      - run: npm install
+      - run: npx nuxt build --preset github_pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./.output/public
 
-    - name: Cache node modules
-      uses: actions/cache@v3
-      with:
-        path: node_modules
-        key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-modules-
+  deploy:
 
-    - name: List files in public directory (for debugging)
-      run: ls -R public/
+    needs: build
 
-    - name: Check for missing assets (for debugging)
-      run: |
-        if [ ! -f ./public/assets/images/insurance/SBI_General.png ]; then
-          echo "Warning: The image SBI_General.png is missing in the public/assets/images/insurance/ directory.";
-        fi
+    permissions:
+      pages: write
+      id-token: write
 
-    - name: Clear cache and build artifacts (force clean build)
-      run: rm -rf node_modules .nuxt .output dist
+    environment:
+      name: github_pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
-    - name: Install Dependencies
-      run: npm install
-
-    - name: Build Nuxt for Static Hosting
-      run: npm run generate
-
-    - name: List files in dist directory (for debugging)
-      run: ls -R dist/
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
