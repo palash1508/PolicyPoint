@@ -10,12 +10,12 @@ export default defineNuxtConfig({
   vite: {
     resolve: {
       alias: {
+        '/assets/': '/static/assets/',
       },
     },
     assetsInclude: ['**/assets/images/**/*']
   },
   build: {
-    publicPath: '/_nuxt/',
   },
 
   compatibilityDate: "2024-12-19",
