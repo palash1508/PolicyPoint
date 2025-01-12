@@ -26,9 +26,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-modules-
 
-    - name: Install Dependencies
-      run: npm install
-
     - name: List files in public directory (for debugging)
       run: ls -R public/
 
@@ -40,6 +37,9 @@ jobs:
 
     - name: Clear cache and build artifacts (force clean build)
       run: rm -rf node_modules .nuxt .output dist
+
+    - name: Install Dependencies
+      run: npm install
 
     - name: Build Nuxt for Static Hosting
       run: npm run generate

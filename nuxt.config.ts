@@ -21,6 +21,6 @@ export default defineNuxtConfig({
 
   compatibilityDate: "2024-12-19",
   app: {
-    baseURL: process.env.BASE_URL || ""
+    baseURL: "/PolicyPoint/"
   },
 })
