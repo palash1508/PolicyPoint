@@ -98,7 +98,7 @@
                             </div>
                         </div>
                         <div class="">
-                            <img src="/assets/images/insurance/Car_Info.png" class="" alt="">
+                            <!-- <img src="/assets/images/insurance/Car_Info.png" class="" alt=""> -->
                         </div>
 
                     </div>
