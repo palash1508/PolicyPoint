@@ -8,5 +8,11 @@ export default defineNuxtConfig({
   primevue: {
   },
 
-  compatibilityDate: "2024-12-19"
+  compatibilityDate: "2024-12-19",
+  nitro: {
+    preset: 'static',
+  },
+  app: {
+    baseURL: '/PolicyPoint/',
+  },
 })

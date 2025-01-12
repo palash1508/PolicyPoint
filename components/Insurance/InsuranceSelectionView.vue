@@ -26,7 +26,7 @@ const cards = [
         text: 'Car Insurance',
         imgLink: '/assets/images/landingPage/HomePageCarInsurance.png',
         iconLink: '/assets/images/landingPage/HomePageCarInsuranceIcon.png',
-        to: '/insurance/health'
+        to: '/insurance/Car'
     },
     {
         name: 'BikeInsurance',
