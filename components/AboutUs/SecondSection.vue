@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div>
-                <img src="/public/assets/images/landingPage/Feedback_PNG.png" alt="">
+                <img src="/assets/images/landingPage/Feedback_PNG.png" alt="">
             </div>
         </div>
     </div>

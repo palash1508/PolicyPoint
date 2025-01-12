@@ -71,7 +71,7 @@
             </div>
 
             <div class="hidden lg:block">
-                <img src="/public/assets/images/Insurance/Health_Discussion.png" alt="">
+                <img src="/assets/images/Insurance/Health_Discussion.png" alt="">
             </div>
         </div>
     </div>
@@ -123,7 +123,7 @@
                     </div>
                     <div class="flex items-center gap-1 lg:gap-3">
                         <div>
-                            <img src="/public/assets/favicon/Calling_Icon.png" alt="">
+                            <img src="/assets/favicon/Calling_Icon.png" alt="">
                         </div>
                         <div class="flex flex-col">
                             <span class="text-[11px] font-bold text-[#999999]">Call Expert</span>
@@ -137,7 +137,7 @@
             </div>
         </div>
         <div>
-            <img src="/public/assets/images/Insurance/Health_Cover2.png" alt="">
+            <img src="/assets/images/Insurance/Health_Cover2.png" alt="">
         </div>
     </div>
 

@@ -35,7 +35,7 @@
         </div>
         <div class="flex flex-col md:flex-row items-start justify-center gap-7 lg:gap-12 px-10 xl:px-16 mt-8 md:mt-12">
             <div class="hidden lg:block">
-                <img src="/public/assets/images/Insurance/Car_Cvr_2.png" alt="">
+                <img src="/assets/images/Insurance/Car_Cvr_2.png" alt="">
             </div>
             <div class="w-full md:w-[522px] ">
                 <div class="flex flex-col justify-between ">
@@ -75,7 +75,7 @@
                                 8655691415</div>
                         </div>
                         <div>
-                            <img src="/public/assets/images/Insurance/Car_Cvr_Icon.png" alt="">
+                            <img src="/assets/images/Insurance/Car_Cvr_Icon.png" alt="">
                         </div>
 
                     </div>
@@ -133,7 +133,7 @@
                     </div>
                     <div class="flex items-center gap-1 lg:gap-3">
                         <div>
-                            <img src="/public/assets/favicon/Calling_Icon.png" alt="">
+                            <img src="/assets/favicon/Calling_Icon.png" alt="">
                         </div>
                         <div class="flex flex-col">
                             <span class="text-[11px] font-bold text-[#999999]">Call Expert</span>
@@ -147,7 +147,7 @@
             </div>
         </div>
         <div>
-            <img src="/public/assets/images/Insurance/Car_Cover2.png" alt="">
+            <img src="/assets/images/Insurance/Car_Cover2.png" alt="">
         </div>
     </div>
 

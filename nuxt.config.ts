@@ -7,6 +7,13 @@ export default defineNuxtConfig({
   ],
   primevue: {
   },
+  vite: {
+    resolve: {
+      alias: {
+        '/assets/': '/public/assets/',
+      },
+    },
+  },
 
   compatibilityDate: "2024-12-19",
   nitro: {

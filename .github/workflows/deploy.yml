@@ -17,6 +17,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '20'
+    
+    - name: Clear cache
+      run: rm -rf node_modules .nuxt .output dist
 
     - name: Install Dependencies
       run: npm install

@@ -161,7 +161,7 @@
     <div
         class="flex flex-col md:flex-row items-center justify-center xl:justify-between gap-7 lg:gap-16 px-3 xl:px-52 py-7 md:py-16">
         <div>
-            <img src="/public/assets/images/Insurance/Health_Cvr_2.png" alt="">
+            <img src="/assets/images/Insurance/Health_Cvr_2.png" alt="">
         </div>
         <div class="w-full md:w-[522px]">
             <div class="flex flex-col">
@@ -178,7 +178,7 @@
                 <div class="flex items-center gap-3 lg:gap-11 mt-7 lg:mt-12">
                     <div class="flex items-center gap-1 lg:gap-3">
                         <div>
-                            <img src="/public/assets/images/Insurance/Health_Avatar.png" alt="">
+                            <img src="/assets/images/Insurance/Health_Avatar.png" alt="">
                         </div>
                         <div class="flex flex-col">
                             <span class="text-[11px] font-bold text-[#999999]">Call Expert</span>

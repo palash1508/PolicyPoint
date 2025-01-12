@@ -32,7 +32,7 @@
                             required />
                     </div>
                     <div class="justify-items-center">
-                        <img src="/public/assets/images/insurance/Car_Form_Img.png" alt="">
+                        <img src="/assets/images/insurance/Car_Form_Img.png" alt="">
                     </div>
                     <button type="submit"
                         class="w-full bg-[#2B2B5F] text-white py-2 rounded-lg hover:bg-[#202054] transition">
@@ -77,7 +77,7 @@
                         <button v-for="option in options" :key="option.value" @click="selectOption(option.value)"
                             class=" flex items-center justify-between gap-12 text-[13px] font-medium bg-white text-[#000000] border border-[#01C4DE] py-3 rounded-lg px-7 hover:bg-gray-100 transition">
                             <span>{{ option.label }}</span>
-                            <img src="/public/assets/favicon/Car_Next_Btn.png" alt="">
+                            <img src="/assets/favicon/Car_Next_Btn.png" alt="">
                         </button>
                     </div>
                     <div class="text-center mt-4">
@@ -100,7 +100,7 @@
                         <NuxtLink v-for="option in didMakeClaimOptions" :key="option.value" to="/insurance/Car/plans"
                             class=" flex items-center justify-between gap-12 text-[13px] font-medium bg-white text-[#000000] border border-[#01C4DE] py-3 rounded-lg px-7 hover:bg-gray-100 transition">
                             <span>{{ option.label }}</span>
-                            <img src="/public/assets/favicon/Car_Next_Btn.png" alt="">
+                            <img src="/assets/favicon/Car_Next_Btn.png" alt="">
                         </NuxtLink>
                     </div>
 

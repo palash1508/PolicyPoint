@@ -8,7 +8,7 @@
         </div>
         <div class="flex flex-col md:flex-row items-center justify-center gap-7 lg:gap-16 px-10 xl:px-32">
             <div>
-                <img src="/public/assets/images/AboutUs_PNG.png" alt="">
+                <img src="/assets/images/AboutUs_PNG.png" alt="">
             </div>
             <div class="w-full md:w-[522px]">
                 <div class="flex flex-col">
@@ -29,7 +29,7 @@
                         </div>
                         <div class="flex items-center gap-1 lg:gap-3">
                             <div>
-                                <img src="/public/assets/favicon/Calling_Icon.png" alt="">
+                                <img src="/assets/favicon/Calling_Icon.png" alt="">
                             </div>
                             <div class="flex flex-col">
                                 <span class="text-[11px] font-bold text-[#999999]">Call Expert</span>
