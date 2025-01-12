@@ -16,10 +16,7 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: "2024-12-19",
-  nitro: {
-    preset: 'static',
-  },
   app: {
-    baseURL: '/PolicyPoint/',
+    baseURL: process.env.BASE_URL || ""
   },
 })
