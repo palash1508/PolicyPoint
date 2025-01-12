@@ -5,6 +5,21 @@ export default defineNuxtConfig({
   css: [
     '@fortawesome/fontawesome-free/css/all.css'
   ],
+  tailwindcss:{
+    viewer: false
+  },
+  nitro: {
+    compressPublicAssets: true,
+    prerender: {
+      crawlLinks: true,
+    }
+  },
+  app:{
+    baseURL: "",
+    head: {
+      title: "Policy Point",
+    }
+  },
   primevue: {
   },
   vite: {
@@ -16,10 +31,8 @@ export default defineNuxtConfig({
     assetsInclude: ['**/assets/images/**/*']
   },
   build: {
+    analyze: true
   },
 
   compatibilityDate: "2024-12-19",
-  app: {
-    baseURL: "/PolicyPoint/"
-  },
 })
