@@ -15,7 +15,7 @@ jobs:
           node-version: "20"
 
       - run: npm install
-      - run: npx nuxt build --preset github_pages
+      - run: npx nuxt build --baseURL=/PolicyPoint/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
