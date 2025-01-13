@@ -15,22 +15,12 @@ export default defineNuxtConfig({
     }
   },
   app:{
-    baseURL: "/PolicyPoint/",
     head: {
       title: "Policy Point",
     }
   },
   primevue: {
   },
-  ssr: false,
-  // vite: {
-  //   resolve: {
-  //     alias: {
-  //       '/assets/': '~/public/assets/',
-  //     },
-  //   },
-  //   assetsInclude: ['**/assets/images/**/*']
-  // },
   build: {
     analyze: true
   },
