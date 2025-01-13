@@ -4,7 +4,7 @@
         <div class="flex flex-col items-center">
             <!-- Logo -->
             <div>
-                <img :src="plan.logo" alt="Plan Logo" class="" />
+                <img :src="`/assets/images/Insurance/${plan.logo}`" alt="Plan Logo" class="" />
             </div>
 
             <!-- Add to Compare -->
@@ -24,7 +24,7 @@
                     <p class="text-[#999999] text-xs font-semibold">Cashless Hospital</p>
                 </div>
                 <div>
-                    <img src="/assets/images/insurance/Hospital_Card_Img.png" alt="">
+                    <img src="/assets/images/Insurance/Hospital_Card_Img.png" alt="">
                 </div>
             </div>
         </div>

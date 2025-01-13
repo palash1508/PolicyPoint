@@ -29,7 +29,7 @@
             <aside class="w-full lg:w-1/5 p-10 border-r-2">
                 <div class="mb-6">
                     <div class="bg-[#2B2B5F] text-white w-full py-4 px-6 hover:bg-blue-800 flex rounded-lg items-center justify-between z-20">
-                        <img src="/assets/images/insurance/Edit_Info.png" alt="">
+                        <img src="/assets/images/Insurance/Edit_Info.png" alt="">
                         <span>Edit Car</span> 
                     </div>
                     
@@ -139,7 +139,7 @@ const insurers = ["SBI Life", "HDFC Ergo", "Max Life", "Kotak Life Insurance", "
 
 const carZeroDepPlans = [
     {
-        logo: "/assets/images/insurance/SBI_General.png",
+        logo: "SBI_General.png",
         insurer: "SBI Car Insurance",
         idvCover: "10 Lakh",
         garages: "237",
@@ -157,7 +157,7 @@ const carZeroDepPlans = [
 
 const carPlans = [
     {
-        logo: "/assets/images/insurance/SBI_General.png",
+        logo: "SBI_General.png",
         insurer: "SBI Car Insurance",
         idvCover: "10 Lakh",
         garages: "237",
@@ -172,7 +172,7 @@ const carPlans = [
         premium: "9999",
     },
     {
-        logo: "/assets/images/insurance/Kotak_General.png",
+        logo: "Kotak_General.png",
         insurer: "Kotak",
         idvCover: "10 Lakh",
         garages: "237",
@@ -187,7 +187,7 @@ const carPlans = [
         premium: "9999",
     },
     {
-        logo: "/assets/images/insurance/Bajaj_Alianz.png",
+        logo: "Bajaj_Alianz.png",
         insurer: "Bajaj",
         idvCover: "10 Lakh",
         garages: "237",

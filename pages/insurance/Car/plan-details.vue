@@ -6,7 +6,7 @@
                     class="flex flex-col md:flex-row items-center justify-between md:items-center gap-8 p-6 bg-white rounded-lg border border-[#2B2B5F80] shadow-md hover:shadow-lg transition-shadow shadow-custom">
                     <div class="flex flex-col items-center">
                         <div>
-                            <img src="/assets/images/insurance/SBI_General.png" alt="Plan Logo" class="" />
+                            <img src="/assets/images/Insurance/SBI_General.png" alt="Plan Logo" class="" />
                         </div>
                     </div>
 
@@ -17,7 +17,7 @@
                         <div class="flex items-center gap-10 mt-2">
                             <div class="flex flex-col xl:flex-row items-center gap-2 text-center">
                                 <p class="text-[#999999] text-xs font-semibold">Cashless Garages</p>
-                                <img src="/assets/images/insurance/Cashless_Garrage.png" class="hidden xl:block"
+                                <img src="/assets/images/Insurance/Cashless_Garrage.png" class="hidden xl:block"
                                     alt="">
                                 <p class="text-sm xl:text-lg font-bold text-[#2B2B5F]">10</p>
                             </div>
@@ -200,7 +200,7 @@
                     <div class="flex-1 flex-col items-center xl:justify-center gap-3">
                         <div class="w-full md:w-2/3 flex items-center gap-7 ">
                             <span class="text-xl font-semibold text-[#2B2B5F]">Cashless Garages</span>
-                            <img src="/assets/images/insurance/Cashless_Garrage2.png" class="" alt="">
+                            <img src="/assets/images/Insurance/Cashless_Garrage2.png" class="" alt="">
                             <span class="text-xl font-semibold text-[#2B2B5F]">10</span>
                         </div>
                     </div>
@@ -287,7 +287,7 @@
                             </div>
                         </div>
                         <div class="">
-                            <img src="/assets/images/insurance/Car_Info.png" class="" alt="">
+                            <img src="/assets/images/Insurance/Car_Info.png" class="" alt="">
                         </div>
 
                     </div>

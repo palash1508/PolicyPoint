@@ -6,7 +6,7 @@
                     class="flex flex-col md:flex-row items-center justify-between md:items-center gap-8 p-6 bg-white rounded-lg border border-[#2B2B5F80] shadow-md hover:shadow-lg transition-shadow shadow-custom">
                     <div class="flex flex-col items-center">
                         <div>
-                            <img src="/assets/images/insurance/Health_SBI.png" alt="Plan Logo" class="" />
+                            <img src="/assets/images/Insurance/Health_SBI.png" alt="Plan Logo" class="" />
                         </div>
                     </div>
 
@@ -17,7 +17,7 @@
                         <div class="flex items-center gap-10 mt-2">
                             <div class="flex flex-col xl:flex-row items-center gap-2 text-center">
                                 <p class="text-[#999999] text-xs font-semibold">Network Hospital</p>
-                                <img src="/assets/images/insurance/Hospital_Card_Img.png" class="hidden xl:block"
+                                <img src="/assets/images/Insurance/Hospital_Card_Img.png" class="hidden xl:block"
                                     alt="">
                                 <p class="text-sm xl:text-lg font-bold text-[#2B2B5F]">237</p>
                             </div>
@@ -52,7 +52,7 @@
                                     <h2
                                         class="lg:text-xl xl:text-2xl font-semibold text-[#2B2B5F] flex items-center xl:w-1/3">
                                         Cashless Hospital
-                                        <img src="/assets/images/insurance/Hospital_Card_Img.png" class="ml-2" alt="">
+                                        <img src="/assets/images/Insurance/Hospital_Card_Img.png" class="ml-2" alt="">
                                     </h2>
                                     <div class="flex items-center gap-8 xl:w-2/3">
                                         <select v-model="selectedCity"
@@ -64,7 +64,7 @@
                                         <div class="relative flex-grow">
                                             <input type="text" v-model="searchQuery" placeholder="Search..."
                                                 class="border border-[#01B9D1] rounded-lg px-4 py-2  text-sm w-full" />
-                                            <img src="/assets/images/insurance/Search_Hospital_PNG.png"
+                                            <img src="/assets/images/Insurance/Search_Hospital_PNG.png"
                                                 class="h-5 w-5 absolute top-1/2 right-3 transform -translate-y-1/2 "
                                                 alt="">
                                         </div>

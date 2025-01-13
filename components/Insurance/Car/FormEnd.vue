@@ -36,7 +36,7 @@
     </div>
 
     <div class="relative w-full flex items-center ">
-        <img src="/assets/images/insurance/Health_New_Form_Cover.png" alt="" class="w-full h-full object-cover">
+        <img src="/assets/images/Insurance/Health_New_Form_Cover.png" alt="" class="w-full h-full object-cover">
         <div class="absolute flex flex-row lg:gap-16 px-3  xl:px-52 w-full justify-between items-center">
             <div class="w-full md:w-[572px] flex flex-col text-[#FFFFFF] h-auto">
                 <div class="">

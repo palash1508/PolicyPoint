@@ -32,7 +32,7 @@
                             required />
                     </div>
                     <div class="justify-items-center">
-                        <img src="/assets/images/insurance/Car_Form_Img.png" alt="">
+                        <img src="/assets/images/Insurance/Car_Form_Img.png" alt="">
                     </div>
                     <button type="submit"
                         class="w-full bg-[#2B2B5F] text-white py-2 rounded-lg hover:bg-[#202054] transition">

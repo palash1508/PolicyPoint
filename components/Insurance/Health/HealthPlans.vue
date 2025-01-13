@@ -29,7 +29,7 @@
             <!-- Sidebar Filters -->
             <aside class="w-full lg:w-1/5 p-10 border-r-2">
                 <button class="bg-[#2B2B5F] text-white w-full py-2 px-4  mb-6 hover:bg-blue-800 flex gap-3 rounded-lg items-center justify-center">
-                    <img src="/assets/images/insurance/Edit_Info.png" alt="">
+                    <img src="/assets/images/Insurance/Edit_Info.png" alt="">
                     Edit your info
                 </button>
 
@@ -126,7 +126,7 @@ const insurers = ["SBI Life", "HDFC Ergo", "Max Life", "Kotak Life Insurance", "
 
 const healthPlans = [
     {
-        logo: "/assets/images/insurance/Health_SBI.png",
+        logo: "Health_SBI.png",
         insurer: "SBI Life",
         sumInsured: "5 Lakh",
         hospitals: "237",
@@ -140,7 +140,7 @@ const healthPlans = [
         monthlyPremium: "999",
     },
     {
-        logo: "/assets/images/insurance/Health_Hdfc.png",
+        logo: "Health_Hdfc.png",
         insurer: "HDFC Ergo",
         sumInsured: "5 Lakh",
         hospitals: "237",
@@ -154,7 +154,7 @@ const healthPlans = [
         monthlyPremium: "999",
     },
     {
-        logo: "/assets/images/insurance/Health_Max_Life.png",
+        logo: "Health_Max_Life.png",
         insurer: "Max Life",
         sumInsured: "5 Lakh",
         hospitals: "237",
@@ -168,7 +168,7 @@ const healthPlans = [
         monthlyPremium: "999",
     },
     {
-        logo: "/assets/images/insurance/Health_Kotak.png",
+        logo: "Health_Kotak.png",
         insurer: "Kotak",
         sumInsured: "5 Lakh",
         hospitals: "237",
@@ -182,7 +182,7 @@ const healthPlans = [
         monthlyPremium: "999",
     },
     {
-        logo: "/assets/images/insurance/Health_Icici.png",
+        logo: "Health_Icici.png",
         insurer: "ICICI Lombard",
         sumInsured: "5 Lakh",
         hospitals: "237",

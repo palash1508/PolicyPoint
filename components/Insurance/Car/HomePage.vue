@@ -1,7 +1,7 @@
 <template>
     <div class="relative flex items-center justify-between h-full md:mb-12 mb-6">
         <!-- Family Image -->
-        <img src="/assets/images/insurance/CarHomeBanner.png" alt="Car Image"
+        <img src="/assets/images/Insurance/CarHomeBanner.png" alt="Car Image"
             class="h-full w-full object-cover" />
 
         <!-- Text Content -->
@@ -88,7 +88,7 @@
 
     <!-- Third Section  -->
     <div class="relative w-full flex items-center ">
-        <img src="/assets/images/insurance/Car_Home_Banner_2.png" alt="" class="w-full h-full object-cover">
+        <img src="/assets/images/Insurance/Car_Home_Banner_2.png" alt="" class="w-full h-full object-cover">
         <div class="absolute flex flex-row lg:gap-16 px-3  xl:px-52 w-full justify-between items-center">
             <div class="w-full md:w-[572px] flex flex-col text-[#FFFFFF] h-auto">
                 <div class="">

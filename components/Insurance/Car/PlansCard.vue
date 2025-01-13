@@ -4,7 +4,7 @@
         <div class="flex flex-col items-center">
             <!-- Logo -->
             <div>
-                <img :src="plan.logo" alt="Plan Logo" class="" />
+                <img :src="`/assets/images/Insurance/${plan.logo}`" alt="Plan Logo" class="" />
             </div>
 
             <!-- Add to Compare -->
@@ -24,7 +24,7 @@
                     <p class="text-[#999999] text-xs font-semibold">Cashless Garages</p>
                 </div>
                 <div>
-                    <img src="/assets/images/insurance/Cashless_Garrage.png" alt="" class="ml-2">
+                    <img src="/assets/images/Insurance/Cashless_Garrage.png" alt="" class="ml-2">
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
             <p class="text-[#999999] font-semibold text-xs">Claims Settled</p>
             <p class="text-[#2B2B5F] font-bold text-xl flex items-center">
                 <span>{{ plan.settlement }} </span>
-                <img src="/assets/images/insurance/Settlement_Trophy.png" alt="" class="w-5 h-5 ml-2">
+                <img src="/assets/images/Insurance/Settlement_Trophy.png" alt="" class="w-5 h-5 ml-2">
             </p>
             <p class="text-[#999999] font-semibold text-xs mt-1">Premium</p>
             <p class="text-[#2B2B5F] font-bold text-xl">
