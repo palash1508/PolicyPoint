@@ -20,21 +20,16 @@ export default defineNuxtConfig({
       title: "Policy Point",
     }
   },
-  runtimeConfig: {
-    public: {
-      baseURL: "/PolicyPoint/",
-    },
-  },
   primevue: {
   },
-  vite: {
-    resolve: {
-      alias: {
-        '/assets/': '~/public/assets/',
-      },
-    },
-    assetsInclude: ['**/assets/images/**/*']
-  },
+  // vite: {
+  //   resolve: {
+  //     alias: {
+  //       '/assets/': '~/public/assets/',
+  //     },
+  //   },
+  //   assetsInclude: ['**/assets/images/**/*']
+  // },
   build: {
     analyze: true
   },
