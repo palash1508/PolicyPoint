@@ -65,7 +65,7 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="h-20 md:w-52 flex items-center justify-center space-x-2 md:space-x-3 md:bg-[#EEEEEECC] text-[#000000]">
+                    <div class="hidden h-20 md:w-52 md:flex items-center justify-center space-x-2 md:space-x-3 md:bg-[#EEEEEECC] text-[#000000]">
                         <a href="#" class="hover:opacity-75"><i class="fa-solid fa-phone-volume text-lg "></i></a>
                         <div class="flex flex-col">
                             <span class="text-[#4A4A4A] text-xs md:text-sm font-medium">Call Expert</span>

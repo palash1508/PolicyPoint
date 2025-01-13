@@ -20,6 +20,11 @@ export default defineNuxtConfig({
       title: "Policy Point",
     }
   },
+  runtimeConfig: {
+    public: {
+      baseURL: "/PolicyPoint/",
+    },
+  },
   primevue: {
   },
   vite: {
