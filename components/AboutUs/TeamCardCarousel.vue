@@ -22,7 +22,7 @@
                     class="  bg-[#FFFFFF] shadow-custom flex flex-col">
                     <div class=" w-[240px] h-[237px]">
                         <div style="border-top-left-radius: 15px;" class="w-auto h-auto">
-                            <img :src="`/assets/images/${card.imageUrl}`" alt="icon" class="" style="border-top-left-radius: 30px;"/>
+                            <img :src="`/assets/images/${card.imageUrl}`" alt="icon" class="" style="border-top-left-radius: 30px;" loading="lazy"/>
                         </div>
                         <div class="bg-[#2B2B5F] flex items-center justify-between">
                             <div class="px-4 h-full">
