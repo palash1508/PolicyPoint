@@ -22,6 +22,7 @@ export default defineNuxtConfig({
   },
   primevue: {
   },
+  ssr: false,
   // vite: {
   //   resolve: {
   //     alias: {
