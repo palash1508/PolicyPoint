@@ -44,7 +44,6 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
 
 // Cards Array
 const cards = ref([

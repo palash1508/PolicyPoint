@@ -14,7 +14,7 @@
                 <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
                     <div v-for="(info, index) in infoData" :key="index" class="flex flex-col space-y-2 xl:w-64 xl:h-40">
                         <div class="">
-                            <img :src="info.icon" :alt="info.alt" class="">
+                            <img :src="`/assets/favicon/${info.icon}.png`" loading="lazy" :alt="info.alt" class="">
                         </div>
                         <div class="ml-1">
                             <h3 class="text-xl font-semibold text-[#2B2B5F]">{{ info.title }}</h3>
@@ -96,28 +96,28 @@
 <script setup>
 const infoData = [
     {
-        icon: '/assets/favicon/Planing_Analysis_Icon.png',
+        icon: 'Planing_Analysis_Icon',
         alt: 'Planing & Analysis Icon',
         title: 'Planing & Analysis',
         description:
             'Lorem ipsum dolor sit amet consectetur. Massa sed donec at velit id eu imperdiet volutpat.',
     },
     {
-        icon: '/assets/favicon/Protector_Insurance_Icon.png',
+        icon: 'Protector_Insurance_Icon',
         alt: 'Protector Insurance Icon',
         title: 'Protector Insurance',
         description:
             'Lorem ipsum dolor sit amet consectetur. Massa sed donec at velit id eu imperdiet volutpat.',
     },
     {
-        icon: '/assets/favicon/Trust_Insured_Icon.png',
+        icon: 'Trust_Insured_Icon',
         alt: 'Trust Insured Icon',
         title: 'Trust Insured',
         description:
             'Lorem ipsum dolor sit amet consectetur. Massa sed donec at velit id eu imperdiet volutpat.',
     },
     {
-        icon: '/assets/favicon/Secure_Coverage_Icon.png',
+        icon: 'Secure_Coverage_Icon',
         alt: 'Secure Coverage Icon',
         title: 'Secure Coverage',
         description:
@@ -134,9 +134,8 @@ const securedLifeTimeQues = [
 
 const activeIndex = ref(null);
 
-// Toggle accordion function
 const toggleAccordion = (index) => {
-    activeIndex.value = activeIndex.value === index ? null : index; // Toggle logic
+    activeIndex.value = activeIndex.value === index ? null : index;
 };
 </script>
 

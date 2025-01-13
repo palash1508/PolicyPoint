@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-const bgImage = '/assets/images/HeroSection/Blogs_BG_Image.jpg'
+const bgImage = 'Blogs_BG_Image.jpg'
 const pageTitle = 'Blogs'
 const breadcrumb = 'Blogs'
 

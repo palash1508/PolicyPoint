@@ -61,29 +61,29 @@ const cards = [
     {
         name: 'LifeInsurance',
         text: 'Life Insurance',
-        imgLink: '/assets/images/landingPage/HomePageLifeInsurance.png',
-        iconLink: '/assets/images/landingPage/HomePageLifeInsuranceIcon.png',
+        imgLink: 'HomePageLifeInsurance.png',
+        iconLink: 'HomePageLifeInsuranceIcon.png',
         to: '/insurance/health'
     },
     {
         name: 'HealthInsurance',
         text: 'Health Insurance',
-        imgLink: '/assets/images/landingPage/HomePageHealthInsurance.png',
-        iconLink: '/assets/images/landingPage/HomePageHealthInsuranceIcon.png',
+        imgLink: 'HomePageHealthInsurance.png',
+        iconLink: 'HomePageHealthInsuranceIcon.png',
         to: '/insurance/health'
     },
     {
         name: 'CarInsurance',
         text: 'Car Insurance',
-        imgLink: '/assets/images/landingPage/HomePageCarInsurance.png',
-        iconLink: '/assets/images/landingPage/HomePageCarInsuranceIcon.png',
+        imgLink: 'HomePageCarInsurance.png',
+        iconLink: 'HomePageCarInsuranceIcon.png',
         to: '/insurance/Car'
     },
     {
         name: 'BikeInsurance',
         text: 'Bike Insurance',
-        imgLink: '/assets/images/landingPage/HomePageBikeInsurance.png',
-        iconLink: '/assets/images/landingPage/HomePageBikeInsuranceIcon.png',
+        imgLink: 'HomePageBikeInsurance.png',
+        iconLink: 'HomePageBikeInsuranceIcon.png',
         to: '/insurance/health'
     },
 ];

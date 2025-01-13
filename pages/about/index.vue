@@ -13,9 +13,9 @@
 </template>
 
 <script setup>
-const bgImage = '/assets/images/HeroSection/AboutUsBG_Image.jpg'
+const bgImage = 'AboutUsBG_Image.jpg'
 const pageTitle = 'About Us'
 const breadcrumb = 'About Us'
-const featuredImage = '/assets/images/HeroSection/AboutUs_F_Image.png'
+const featuredImage = 'AboutUs_F_Image.png'
 
 </script>

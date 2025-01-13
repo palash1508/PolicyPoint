@@ -2,7 +2,7 @@
     <div>
         <div class="relative flex items-center justify-between lg:h-[351px] xl:h-[451px]">
             <!-- Background Image -->
-            <img :src="bgImage" alt="Background IMG"
+            <img :src="`/assets/images/HeroSection/${bgImage}`" alt="Background IMG" loading="lazy"
                 class="h-full w-full object-cover" />
             <div class="bg-[#2B2B5FD9] w-full h-full absolute opacity-85"></div>
 
@@ -26,9 +26,9 @@
 
                 </div>
                 <div v-if="featuredImage" class="h-full hidden lg:block lg:w-2/3 xl:w-1/2 relative overflow-hidden">
-                    <img :src="CIRCLE_IMG_URL" alt="Circle img"
+                    <img src="/assets/images/HeroSection/HeroSectionCircle1.png" alt="Circle img"
                         class="absolute hidden lg:block bottom-0 lg:right-52 xl:right-72 lg:h-[350px] xl:h-[500px]" />
-                    <img :src="featuredImage" alt="Featured Image"
+                    <img :src="`/assets/images/HeroSection/${featuredImage}`" alt="Featured Image" loading="lazy"
                         :class="[
                             'absolute hidden lg:block bottom-0 right-0',
                             title === 'Contact Us' ? 'lg:h-[280px] xl:h-[390px] right-14' : 'lg:h-[320px] xl:h-[450px]',
@@ -39,10 +39,10 @@
             </div>
 
             <!-- Top Left Corner Image -->
-            <img :src="TOP_LEFT_PNG_URL" alt="Top left img" class="absolute hidden lg:block top-0" />
+            <img src="/assets/images/HeroSection/LeftUP.png" alt="Top left img" class="absolute hidden lg:block top-0" />
 
             <!-- Bottom Left Corner Image -->
-            <img :src="BOTTOM_LEFT_PNG_URL" alt="Bottom left img"
+            <img src="/assets/images/HeroSection/LeftDown.png" alt="Bottom left img"
                 class="absolute hidden lg:block lg:bottom-9 xl:bottom-20 lg:left-9 xl:left-12" />
 
         </div>
@@ -70,7 +70,4 @@ const prop = defineProps({
     },
 });
 
-const CIRCLE_IMG_URL = '/assets/images/HeroSection/HeroSectionCircle1.png'
-const TOP_LEFT_PNG_URL = '/assets/images/HeroSection/LeftUP.png'
-const BOTTOM_LEFT_PNG_URL = '/assets/images/HeroSection/LeftDown.png'
 </script>

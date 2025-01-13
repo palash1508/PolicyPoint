@@ -7,7 +7,7 @@
                 class=" w-full bg-[#FFFFFF] shadow-custom p-6 flex flex-col justify-between">
                 <div class=" w-[200px] h-[230px]">
                     <div style="border-top-left-radius: 15px;" class="w-[60px] h-[60px] flex items-center justify-center bg-[#01C4DE]">
-                        <img :src="card.icon" alt="icon" class="" />
+                        <img :src="`/assets/favicon/${card.icon}`" alt="icon" class="" loading="lazy"/>
                     </div>
                     <h3 class="text-2xl font-semibold text-[#2B2B5F] mt-1 pr-3">{{ card.title }}</h3>
                     <p class="text-xs font-semibold text-[#999999] mt-2">{{ card.description }}</p>
@@ -37,37 +37,37 @@ import { ref, computed } from 'vue';
 // Cards Array
 const cards = ref([
     {
-        icon: '/assets/favicon/Aim_Carousel_1.png',
+        icon: 'Aim_Carousel_1.png',
         title: 'Comprehensive advice',
         description: 'In cases which reuire a multidisciplinary approach, we work with trusted partners and associates',
     },
     {
-        icon: '/assets/favicon/Aim_Carousel_2.png',
+        icon: 'Aim_Carousel_2.png',
         title: 'Sustainable solutions',
         description: 'In cases which reuire a multidisciplinary approach, we work with trusted partners and associates',
     },
     {
-        icon: '/assets/favicon/Aim_Carousel_3.png',
+        icon: 'Aim_Carousel_3.png',
         title: 'Communication confidentiality',
         description: 'In cases which reuire a multidisciplinary approach, we work with trusted partners and associates',
     },
     {
-        icon: '/assets/favicon/Aim_Carousel_4.png',
+        icon: 'Aim_Carousel_4.png',
         title: 'No obligation quote',
         description: 'In cases which reuire a multidisciplinary approach, we work with trusted partners and associates',
     },
     {
-        icon: '/assets/favicon/Aim_Carousel_1.png',
+        icon: 'Aim_Carousel_1.png',
         title: 'Comprehensive advice',
         description: 'In cases which reuire a multidisciplinary approach, we work with trusted partners and associates',
     },
     {
-        icon: '/assets/favicon/Aim_Carousel_2.png',
+        icon: 'Aim_Carousel_2.png',
         title: 'Communication confidentiality',
         description: 'In cases which reuire a multidisciplinary approach, we work with trusted partners and associates',
     },
     {
-        icon: '/assets/favicon/Aim_Carousel_3.png',
+        icon: 'Aim_Carousel_3.png',
         title: 'Sustainable solutions',
         description: 'In cases which reuire a multidisciplinary approach, we work with trusted partners and associates',
     },

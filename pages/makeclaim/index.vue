@@ -24,10 +24,10 @@
 </template>
 
 <script setup>
-const bgImage = '/assets/images/HeroSection/MakeAClaim_BG_Image.jpg'
+const bgImage = 'MakeAClaim_BG_Image.jpg'
 const pageTitle = 'Make A Claim'
 const breadcrumb = 'Make A Claim'
-const featuredImage = '/assets/images/HeroSection/MakeAClaim_F_Image.png'
+const featuredImage = 'MakeAClaim_F_Image.png'
 
 </script>
 

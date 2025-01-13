@@ -20,10 +20,10 @@
 </template>
 
 <script setup>
-const bgImage = '/assets/images/HeroSection/FAQ_BG_Image.jpg'
+const bgImage = 'FAQ_BG_Image.jpg'
 const pageTitle = 'FAQS'
 const breadcrumb = 'FAQS'
-const featuredImage = '/assets/images/HeroSection/FAQ_F_Image.png'
+const featuredImage = 'FAQ_F_Image.png'
 
 </script>
 

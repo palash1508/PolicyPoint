@@ -4,7 +4,7 @@
         <div class="flex flex-col items-center">
             <!-- Logo -->
             <div>
-                <img :src="`/assets/images/Insurance/${plan.logo}`" alt="Plan Logo" class="" />
+                <img :src="`/assets/images/Insurance/${plan.logo}`" alt="Plan Logo" class="" loading="lazy"/>
             </div>
 
             <!-- Add to Compare -->

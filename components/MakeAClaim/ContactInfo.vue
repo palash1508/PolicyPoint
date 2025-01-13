@@ -6,7 +6,7 @@
             class="flex items-center py-2"
         >
             <div class="h-8 flex items-center  space-x-2">
-                <img :src="info.icon" :alt="info.title" class="" />
+                <img :src="`/assets/favicon/MakeClaim/${info.icon}`" :alt="info.title" class="" loading="lazy"/>
                 <div>
                     <h3 class="text-[10px] font-semibold text-[#999999]">{{ info.title }}</h3>
                     <p class="text-xs text-[#2B2B5F] font-semibold">{{ info.detail }}</p>
@@ -26,17 +26,17 @@ const prop = defineProps({
 });
 const contactDetails = [
     {
-        icon: '/assets/favicon/MakeClaim/Location_Icon.png',
+        icon: 'Location_Icon.png',
         title: 'Address office',
         detail: '999 main st, Delhi - 110001',
     },
     {
-        icon: '/assets/favicon/MakeClaim/Call_Icon.png',
+        icon: 'Call_Icon.png',
         title: 'Phone No.',
         detail: '+91 8655691415',
     },
     {
-        icon: '/assets/favicon/MakeClaim/Mail_Icon.png',
+        icon: 'Mail_Icon.png',
         title: 'Email',
         detail: 'policypoint@support.mail.com',
     },

@@ -19,9 +19,9 @@
 </template>
 
 <script setup>
-const bgImage = '/assets/images/HeroSection/ContactUs_BG_Image.jpg'
+const bgImage = 'ContactUs_BG_Image.jpg'
 const pageTitle = 'Contact Us'
 const breadcrumb = 'Contact Us'
-const featuredImage = '/assets/images/HeroSection/ContactUs_F_Image.png'
+const featuredImage = 'ContactUs_F_Image.png'
 
 </script>

@@ -17,7 +17,7 @@
                         class="flex flex-col items-center text-center space-y-2 xl:w-64 xl:h-40">
                         <div class="w-20 h-20 flex items-center justify-center
                             ">
-                            <img :src="info.icon" :alt="info.alt" class="">
+                            <img :src="`/assets/favicon/${info.icon}.png`" :alt="info.alt" loading="lazy" class="">
                         </div>
                         <h3 class="text-xl font-semibold text-[#000000]">{{ info.title }}</h3>
                         <p class="text-[#344588] text-xs font-semibold">
@@ -35,28 +35,28 @@
 
 const infoData = [
     {
-        icon: '/assets/favicon/Claim_Assist_Icon.png',
+        icon: 'Claim_Assist_Icon',
         alt: 'Claim Assistance Icon',
         title: 'Claim Assistance',
         description:
             'Get 24x7 claim assistance from our best advisors that will help you make your claim process hassle-free',
     },
     {
-        icon: '/assets/favicon/Instant_Quote_Icon.png',
+        icon: 'Instant_Quote_Icon',
         alt: 'Get Instant Quotes Icon',
         title: 'Get Instant Quotes',
         description:
             'Discover the convenience of instant quotes at your fingertips. Experience fast and hassle-free insurance planning',
     },
     {
-        icon: '/assets/favicon/Expert_Advice_Icon.png',
+        icon: 'Expert_Advice_Icon',
         alt: 'Expert Advice Icon',
         title: 'Expert Advice',
         description:
             'Trustworthy expertise for all your insurance needs. Our reliable advisors are here to assist you every step of the way.',
     },
     {
-        icon: '/assets/favicon/Achievement_Icon.png',
+        icon: 'Achievement_Icon',
         alt: 'Fast & Reliable Icon',
         title: 'Fast & Reliable',
         description:

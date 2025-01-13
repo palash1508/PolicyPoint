@@ -27,9 +27,9 @@
 </template>
 
 <script setup>
-const bgImage = '/assets/images/HeroSection/Insurance_BG_Image.jpg'
+const bgImage = 'Insurance_BG_Image.jpg'
 const pageTitle = 'Insurance'
 const breadcrumb = 'Insurance'
-const featuredImage = '/assets/images/HeroSection/Insurance_F_Image.png'
+const featuredImage = 'Insurance_F_Image.png'
 
 </script>

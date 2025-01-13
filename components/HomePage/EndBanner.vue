@@ -18,7 +18,7 @@
                 <div v-for="(card, index) in insuranceCards" :key="index"
                     class="w-52 h-52 flex flex-col items-center justify-between">
                     <div class="h-full flex items-center justify-center">
-                        <img :src="card.icon" :alt="card.alt">
+                        <img :src="`/assets/favicon/${card.icon}`" :alt="card.alt" loading="lazy">
                     </div>
                     <button
                         class="w-full flex items-center justify-center h-10 bg-[#2B2B5F] text-[#FFFFFF] rounded-b-xl text-base font-semibold">
@@ -73,7 +73,7 @@
     <div class="w-full bg-[#ECEBF0] mt-3 md:mt-0">
         <div class="flex items-center justify-center h-full md:gap-6 lg:gap-10 px-8 lg:px-16">
             <div v-for="provider in insuranceProvidersIcons" class="flex">
-                <img :src="`/assets/favicon/${provider}.png`" alt="">
+                <img :src="`/assets/favicon/${provider}.png`" alt="" loading="lazy">
             </div>
 
         </div>
@@ -108,42 +108,42 @@
 const insuranceProvidersIcons = ['Sbi_Life', 'Hdfc_Ergo', 'Max_Life', 'Kotak_Life', 'Icici_Lombard']
 const insuranceCards = [
     {
-        icon: '/assets/favicon/Health_PNG.png',
+        icon: 'Health_PNG.png',
         alt: 'Health icon',
         title: 'Health',
     },
     {
-        icon: '/assets/favicon/Family_PNG.png',
+        icon: 'Family_PNG.png',
         alt: 'Family icon',
         title: 'Family Health Insurance',
     },
     {
-        icon: '/assets/favicon/Life_PNG.png',
+        icon: 'Life_PNG.png',
         alt: 'Life icon',
         title: 'Life Insurance',
     },
     {
-        icon: '/assets/favicon/Travel_PNG.png',
+        icon: 'Travel_PNG.png',
         alt: 'Travel icon',
         title: 'Travel Insurance',
     },
     {
-        icon: '/assets/favicon/Car_PNG.png',
+        icon: 'Car_PNG.png',
         alt: 'Car icon',
         title: 'Car Insurance',
     },
     {
-        icon: '/assets/favicon/Bike_PNG.png',
+        icon: 'Bike_PNG.png',
         alt: 'Bike icon',
         title: 'Two Wheeler Insurance',
     },
     {
-        icon: '/assets/favicon/Airline_PNG.png',
+        icon: 'Airline_PNG.png',
         alt: 'Airline icon',
         title: 'Travel Insurance',
     },
     {
-        icon: '/assets/favicon/Home_PNG.png',
+        icon: 'Home_PNG.png',
         alt: 'Home icon',
         title: 'Home Insurance',
     },
