@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="h-20 flex flex-wrap items-center md:justify-between ">
-                <button class="lg:hidden focus:outline-none text-black border-2 p-3 rounded-md ml-1">
+                <button @click="toggleDrawer" class="lg:hidden focus:outline-none text-black border-2 p-3 rounded-md ml-1">
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="h-20 hidden lg:flex items-center justify-center pl-2 md:pl-5 overflow-hidden">
@@ -76,12 +76,45 @@
                 </div>
             </div>
         </header>
+        <!-- Mobile Navigation Drawer -->
+        <transition name="slide">
+            <div
+                v-if="isDrawerOpen"
+                class="fixed inset-0 z-50 bg-black bg-opacity-50"
+                @click.self="toggleDrawer"
+            >
+                <div
+                    class="bg-white w-64 h-full shadow-md"
+                    @click.stop
+                >
+                    <div class="border-b">
+                        <img src="/assets/favicon/header_logo1.png" alt="Policy Point" class="h-24 w-24" />
+                    </div>
+                    <nav class="p-4 space-y-4">
+                        <NuxtLink
+                            v-for="link in navigationLinks"
+                            :key="link.name"
+                            :to="link.route"
+                            @click="toggleDrawer"
+                            class="block text-base font-medium text-[#808080CC] hover:text-[#01C4DE] transition"
+                        >
+                            {{ link.name }}
+                        </NuxtLink>
+                    </nav>
+                </div>
+            </div>
+        </transition>
     </div>
 </template>
 
 <script setup>
 const route = useRoute();
 
+const isDrawerOpen = ref(false);
+
+const toggleDrawer = () => {
+    isDrawerOpen.value = !isDrawerOpen.value;
+};
 
 const topNavigationLinks = [
   { name: 'Make A Claim', route: '/makeclaim' },
@@ -101,3 +134,17 @@ const isActiveRoute = (routePath) => {
   return route.path === routePath;
 };
 </script>
+<style scoped>
+.slide-enter-active,
+.slide-leave-active {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.slide-enter {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.slide-leave-to {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+</style>
