@@ -84,7 +84,7 @@ const cards = [
         text: 'Bike Insurance',
         imgLink: 'HomePageBikeInsurance.png',
         iconLink: 'HomePageBikeInsuranceIcon.png',
-        to: '/insurance/health'
+        to: '/insurance/Bike'
     },
 ];
 

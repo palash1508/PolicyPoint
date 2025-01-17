@@ -39,12 +39,22 @@
                         Continue
                     </button>
                 </form>
-                <div class="text-center mt-2">
-                    <span class="text-[#000000] font-medium text-[15px]">Brand New Car ? <button
-                            class="text-[#3C8AFF]">Click Here</button> </span>
+                <div class="text-center">
+                    <button class="text-center mt-2" @click="newCarFormDialog = true"> 
+                        <span class="text-[#000000] font-medium text-[15px]">Brand New Car ? <button
+                                class="text-[#3C8AFF]">Click Here</button> </span>
+                    </button>
+
                 </div>
             </div>
         </div>
+
+        <Dialog v-model:visible="newCarFormDialog" modal :closable="false" :close-icon="false"
+            pt:root:class="!border-0 !bg-transparent" pt:mask:class="backdrop-blur-sm">
+            <div class="bg-[#FFFFFF] border border-[#2B2B5F] rounded-lg">
+                <InsuranceCarNewCarEntry @closeDialog="newCarFormDialog = false"/>
+            </div>
+        </Dialog>
 
         <!-- PrimeVue Dialog -->
         <Dialog v-model:visible="showDialog" modal :closable="false" :close-icon="false"
@@ -125,6 +135,7 @@ const form = ref({
 
 // Dialog state
 const showDialog = ref(false);
+const newCarFormDialog = ref(false);
 const step = ref(1); // 1: Date selection, 2: Options selection
 const expiryDate = ref(null);
 
