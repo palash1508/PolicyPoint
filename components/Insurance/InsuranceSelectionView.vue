@@ -47,7 +47,7 @@ const cards = [
         text: 'Travel Insurance',
         imgLink: 'Travel_Insurance.png',
         iconLink: 'HomePageHealthInsuranceIcon.png',
-        to: '/insurance/health'
+        to: '/insurance/Travel'
     },
     {
         name: 'HomeInsurance',
