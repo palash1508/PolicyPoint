@@ -2,7 +2,7 @@
     <div>
         <div class="relative flex items-center justify-between lg:h-[351px] xl:h-[451px]">
             <!-- Background Image -->
-            <img :src="`/assets/images/HeroSection/${bgImage}`" alt="Background IMG" loading="lazy"
+            <img :src="`/assets/images/HeroSection/${bgImage}`" alt="Background IMG" loading="eager"
                 class="h-full w-full object-cover" />
             <div class="bg-[#2B2B5FD9] w-full h-full absolute opacity-85"></div>
 
