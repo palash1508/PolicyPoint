@@ -7,11 +7,11 @@
         <!-- Text Content -->
         <div class="absolute w-1/2 h-full items-center flex  lg:mt-8">
             <div class="w-auto h-auto lg:w-[491px] lg:h-[368px] mx-auto text-center ">
-                <h1 class="text-base md:text-lg lg:text-4xl font-semibold text-[#2B2B5F] mb-2 lg:mb-4">
+                <h1 class="text-[10px] md:text-lg lg:text-4xl font-semibold text-[#2B2B5F] mb-2 lg:mb-4">
                     Your Guide to Choosing the Perfect Health Insurance
                 </h1>
                 <div
-                    class="w-1/2 lg:w-80 text-[#344588] text-xs md:text-sm lg:text-xl font-semibold mx-auto mt-1 md:mt-3 lg:mt-8 lg:leading-10">
+                    class="w-1/2 lg:w-80 text-[#344588] text-[9px] mb-3 md:text-sm lg:text-xl font-semibold mx-auto mt-1 md:mt-3 lg:mt-8 lg:leading-10">
                     <span class="">
                         Choose the Perfect Health Insurance Plan Tailored Just for You
                     </span>

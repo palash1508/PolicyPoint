@@ -7,16 +7,16 @@
         <!-- Text Content -->
         <div class="absolute w-1/2 h-full items-center flex  lg:mt-8">
             <div class="w-auto h-auto lg:w-[491px] lg:h-[368px] mx-auto text-center ">
-                <h1 class="text-base md:text-lg lg:text-4xl font-semibold text-[#2B2B5F] mb-2 lg:mb-4 lg:leading-10">
+                <h1 class="text-xs md:text-lg lg:text-4xl font-semibold text-[#2B2B5F] mb-2 lg:mb-4 lg:leading-10">
                     Save Up to 30% On <br> Your Travel Insurance <br> In Miutes
                 </h1>
                 <div
-                    class="w-1/2 lg:w-80 text-[#344588] text-xs md:text-sm lg:text-xl font-semibold mx-auto mt-1 md:mt-3 lg:mt-8 lg:leading-10">
+                class="w-1/2 lg:w-80 text-[#344588] text-[9px] md:text-sm lg:text-xl font-semibold mx-auto mt-1 md:mt-3 lg:mt-8 lg:leading-10">
                     <span class="">
                         Fast, Easy, and Affordable!
                     </span>
                 </div>
-                <div class="mt-8">
+                <div class="mt-4 md:mt-8">
                     <NuxtLink to="/insurance/Travel/newform"
                         class="md:mt-8 mt-2 px-10 py-2 bg-[#2B2B5F] text-[#FFFFFF] rounded-md hover:bg-[#2B2B5F]Dark transition">
                         Get Started
